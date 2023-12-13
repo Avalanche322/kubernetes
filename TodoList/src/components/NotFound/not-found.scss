@@ -1,0 +1,26 @@
+.not-found {
+	height: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0px 15px;
+
+	&__code {
+		font-size: 100px;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 24px;
+
+		p {
+			margin-top: 10px;
+		}
+
+		.btn-cancel {
+			color: rgb(var(--text-light));
+		}
+	}
+}

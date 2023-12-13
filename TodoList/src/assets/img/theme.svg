@@ -1,0 +1,19 @@
+<svg width="167" height="78" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_18">
+   <rect fill="#ffffff" stroke="#000" x="0.33054" y="0.13567" width="166" height="77" id="svg_1" rx="4"/>
+   <ellipse fill="#ffffff" cx="11.12281" cy="37.43159" id="svg_4" rx="3" ry="3" stroke="#000" opacity="0.2"/>
+   <ellipse fill="#ffffff" cx="11.12281" cy="53.34715" id="svg_5" rx="3" ry="3" stroke="#000" opacity="0.2"/>
+   <rect fill="#ff56aa" x="7.69812" y="63.62105" width="26.02733" height="6" id="svg_6" stroke="#000" stroke-width="0" rx="2"/>
+   <rect fill="#333333" stroke="#000" x="20.02683" y="34.16907" width="87.671" height="6" id="svg_7" rx="2" opacity="0.22" stroke-width="0"/>
+   <rect fill="#333333" stroke="#000" x="115.91699" y="34.16907" width="40.41085" height="6" id="svg_8" rx="2" opacity="0.2" stroke-width="0"/>
+   <rect fill="#333333" x="20.02683" y="49.92245" width="56.84916" height="6" id="svg_9" stroke="#000" rx="2" opacity="0.2" stroke-width="0"/>
+   <rect fill="#333333" x="83.04036" y="49.92245" width="72.60255" height="6" id="svg_10" stroke="#000" rx="2" opacity="0.2" stroke-width="0"/>
+   <rect stroke="#000" y="0.61349" stroke-width="0" rx="4" id="svg_12" height="25.76935" width="165.1561" x="0.72415" fill="#333333"/>
+   <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="12" id="svg_13" y="17.93368" x="8.60655" stroke-width="0" stroke="#000" fill="#ffffff">Text</text>
+   <rect stroke="#000" stroke-width="0" id="svg_16" height="4.50819" width="165.15336" y="23.00822" x="0.73374" fill="#333333"/>
+  </g>
+ </g>
+
+</svg>

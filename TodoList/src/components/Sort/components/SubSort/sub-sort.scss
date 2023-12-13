@@ -1,0 +1,16 @@
+.sub-sort-main{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	border-bottom: 1px groove rgb(var(--text-light));
+	padding: 12px 0px;
+	font-size: 14px;
+
+	.close {
+		font-size: 14px;
+	}
+	&__name {
+		user-select: none;
+		margin: 0px 8px 0px 3px;
+	}
+}

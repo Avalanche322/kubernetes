@@ -1,0 +1,33 @@
+.quick-add {
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__body {
+		width: 600px;
+		margin: 0;
+		padding: 0;
+		box-shadow: 0 1px 4px 0 rgb(0 0 0 / 8%), 0 15px 50px 0 rgb(0 0 0 / 60%);
+	}
+
+	&__text {
+		border-radius: 12px;
+		padding: 10px;
+	}
+
+	&__bottom {
+		margin: 0;
+		border-bottom: 1px solid rgb(var(--text-light));
+		padding: 10px 10px 15px 10px;
+	}
+
+	&__action {
+		padding: 15px 10px 10px 10px;
+	}
+}

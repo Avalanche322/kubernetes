@@ -1,0 +1,390 @@
+/*======================Main======================*/
+.main {
+	width: 100%;
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	padding: 0px 30px 50px;
+	margin-top: 20px;
+	overflow: auto;
+	@media (max-width: 768px) {
+		margin-top: 60px;
+	}
+
+	&__header {
+		position: relative;
+		border-bottom: 1px groove rgb(var(--text-light));
+		padding-bottom: 8px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		span {
+			font-size: 24px;
+			font-weight: 500;
+		}
+
+		small {
+			font-weight: 300;
+			color: rgb(var(--text-light));
+			margin-left: 8px;
+		}
+	}
+
+	&__task {
+		// change component day for task
+		position: relative;
+		border-bottom: 1px groove rgb(var(--text-light));
+		padding: 12px 0px;
+		display: flex;
+		width: 100%;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		&:hover {
+			.main__task-action {
+				opacity: 1;
+			}
+		}
+
+		.day {
+			position: relative;
+			display: inline-block;
+
+			&__btn {
+				font-size: 12px;
+				margin: 5px 8px 0px 0px;
+				border: none;
+				padding: 0;
+
+				&:hover,
+				&:focus {
+					background: none;
+					color: rgb(var(--text-light));
+				}
+
+				&:before {
+					margin-right: 5px;
+				}
+			}
+		}
+
+		.denger-btn {
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: rgb(var(--text-light)) !important;
+			}
+		}
+
+		.btn {
+			padding: 0;
+			font-size: 12px;
+			margin-top: 5px;
+
+			&:hover {
+				color: rgb(var(--text-light));
+				background: transparent;
+			}
+
+			&::before {
+				margin-right: 3px;
+			}
+		}
+	}
+
+	&__task-focus {
+		background: rgba(var(--text-light), 0.2);
+	}
+
+	&__task-selected {
+		background: rgb(var(--text-light));
+	}
+
+	&__text {
+		user-select: none;
+	}
+
+	&__group-task {
+		width: 100%;
+	}
+
+	&__group {
+		display: flex;
+		align-items: center;
+	}
+
+	&__day-of {
+		height: 80%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__task-action {
+		position: absolute;
+		right: 0;
+		top: 12px;
+		display: flex;
+		background: rgb(var(--bg));
+		box-shadow: -12px 7px 18px 4px rgba(var(--bg), 1);
+		padding: 2px 8px;
+		opacity: 0;
+		transition: all 0.3s ease;
+
+		&:focus {
+			opacity: 1;
+		}
+	}
+
+	&__link {
+		&::before {
+			content: '';
+			top: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+/*Editor Task*/
+.main-editor-task {
+	&__btn {
+		margin-top: 12px;
+		width: 100%;
+		text-align: left;
+		background: transparent;
+		color: rgb(var(--text));
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: rgb(var(--text-light));
+		}
+
+		i {
+			margin-right: 10px;
+		}
+	}
+}
+
+/*Editor Task Text Form*/
+.main-editor-task-form {
+	&__action {
+		margin-top: 12px;
+	}
+}
+
+/*Editor Task Select day*/
+.day {
+	&__btn {
+		border: 1px solid rgba(var(--text-light), 0.6);
+
+		&:hover,
+		&:focus {
+			border-color: rgba(var(--text-light), 0.5);
+		}
+
+		&:before {
+			margin-right: 10px;
+		}
+	}
+
+	&__list {
+		min-width: 240px;
+
+		li {
+			&:not(:first-child, .main-editor-task-form-day__moment) {
+				cursor: pointer;
+				line-height: 30px;
+
+				&:hover {
+					background: rgba(var(--text-support), 0.2);
+				}
+			}
+
+			&:first-child {
+				line-height: 35px;
+				margin-bottom: 5px;
+				border-bottom: 1px solid rgb(var(--text-light));
+			}
+		}
+	}
+
+	&__date {
+		color: rgb(var(--text-light));
+		float: right;
+		margin-right: 10px;
+	}
+
+	&__day {
+		margin-left: 10px;
+		margin-right: 10px;
+
+		&:before {
+			margin-right: 10px;
+		}
+	}
+
+	&__moment {
+		line-height: 35px;
+		margin-bottom: 5px;
+		border-bottom: 1px solid rgb(var(--text-light));
+	}
+
+	&__input {
+		background: transparent;
+		width: 100%;
+		height: 100%;
+		padding-left: 10px;
+		color: rgb(var(--text));
+
+		&:focus {
+			outline: none !important;
+		}
+	}
+
+	&__input-text {
+		margin-left: 10px;
+
+		span,
+		time {
+			cursor: pointer;
+			margin-left: 5px;
+			color: rgb(var(--text-light));
+
+			&:hover {
+				color: rgb(var(--text-support));
+			}
+		}
+	}
+
+	&__input-subtext {
+		margin-left: 10px;
+		font-size: 10px;
+		line-height: 18px;
+		max-width: 300px; // width dropdawn 
+		margin-bottom: 5px;
+
+		span {
+			color: rgb(var(--text-light));
+		}
+	}
+}
+
+/*Editor Task Select Priority*/
+.priority {
+	&__btn {
+		margin-right: 10px;
+	}
+
+	&__list {
+		min-width: 250px;
+		right: 0;
+
+		li {
+			cursor: pointer;
+			line-height: 30px;
+
+			&:hover {
+				background: rgba(var(--text-support), 0.2);
+			}
+		}
+	}
+
+	&__priority {
+		&:before {
+			margin-right: 10px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 8px 10px;
+		justify-content: space-between;
+	}
+}
+
+/*Editor Task Comment*/
+.comment {
+	&__btn {
+		background: transparent;
+		color: rgb(var(--text));
+		background: transparent;
+		border-radius: 8px;
+		padding: 8px;
+		transition: all 0.3s ease;
+
+		&:hover,
+		&:focus {
+			background: rgba(var(--text-light), 0.5);
+		}
+	}
+
+	&__dialog {
+		position: absolute;
+		border-radius: 4px;
+		box-shadow: 0px 8px 14px 1px rgba(0, 0, 0, 0.44);
+		min-width: 350px;
+		padding: 15px;
+		right: -5%;
+		background-color: rgb(var(--bg-light));
+		z-index: 1;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+
+	&__title {
+		pointer-events: none;
+		font-size: 16px;
+	}
+
+	&__text {
+		width: 100%;
+		resize: none;
+		line-height: 20px;
+		border-radius: 4px;
+		border: 1px solid rgb(var(--text-light));
+		background: rgb(var(--bg-light));
+		color: rgb(var(--text));
+		padding: 10px 10px 50px 10px;
+
+		&:focus {
+			border-color: rgb(var(--text-support));
+			outline: none !important;
+		}
+	}
+}
+
+/*No Task*/
+.main-day-of {
+	&__logo {
+		font-size: 60px;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		font-size: 16px;
+	}
+
+	&__sub-text {
+		font-weight: 300;
+		margin-top: 10px;
+		line-height: 18px;
+		color: rgb(var(--text-light));
+	}
+}

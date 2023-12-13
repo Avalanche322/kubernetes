@@ -1,0 +1,133 @@
+$red: #DE354C;
+
+.task-detail {
+	position: fixed;
+	overflow: hidden;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .5);
+	display: flex;
+	padding: 50px 30px;
+	justify-content: center;
+	align-items: center;
+	&__body {
+		width: 650px;
+		padding: 20px 24px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		border-radius: 12px;
+		background: rgb(var(--bg));
+		box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+	&__overview {
+		margin-top: 20px;
+	}
+	&__text {
+		font-weight: 600;
+		font-size: 16px;
+		margin-bottom: 15px;
+		word-wrap: break-word;
+		word-break: break-word;
+	}
+	&__task {
+		display: flex;
+	}
+	&__group {
+		width: 100%;
+	}
+	&__actions {
+		display: flex;
+		margin-top: 10px;
+		position: relative;
+		align-items: center;
+		justify-content: flex-end;
+
+		div:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+	.priority__btn {
+		margin: 0;
+	}
+	&__delete {
+		&:hover {
+			color: $red;
+		}
+	}
+	&__tabs {
+		margin-top: 20px;
+		height: 100%;
+	}
+	@media (max-width: 768px) {
+		padding: 50px 0px 0px 0px;
+		&__body {
+			width: 100%;
+		}
+	}
+}
+
+.task-detail-tabs {
+	&__menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__btn {
+		background: transparent;
+		color: rgb(var(--text));
+		padding-bottom: 5px;
+		border-bottom: 1px solid rgba(var(--text-light), 0.5);
+		flex: 1;
+		transition: all 0.3s ease;
+
+		&.active {
+			color: rgb(var(--text-support));
+			border-color: rgb(var(--text-support));
+		}
+	}
+
+	&__item {
+		//height: 340px;
+		height: 100%;
+		justify-content: space-between;
+		overflow: auto;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding-top: 20px;
+	}
+
+	&__list {
+		overflow: auto;
+		scroll-behavior: smooth;
+		position: relative;
+		max-height: 250px;
+		//margin-bottom: 20px;
+		flex: 1;
+
+		li {
+			display: flex;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			&:hover {
+				.task-detail-comments__active {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

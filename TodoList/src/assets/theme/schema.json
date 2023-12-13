@@ -1,0 +1,38 @@
+{
+	"blueDark" : {
+		"name": "Blue Dark",
+		"id": 1,
+		"bg": "18, 35, 46",
+		"textLight": "0, 124, 199",
+		"textSupport": "77, 168, 218",
+		"bgLight": "32, 54, 71",
+		"text": "238, 251, 251"
+	},
+	"Gray" : {
+		"name": "Gray",
+		"id": 2,
+		"bg": "237, 243, 245",
+		"textLight": "124, 130, 117",
+		"textSupport": "168, 173, 161",
+		"bgLight": "220, 225, 227",
+		"text": "92, 95, 88"
+	},
+	"Yellow" : {
+		"name": "Yellow",
+		"id": 3, 
+		"bg": "32, 32, 32",
+		"textLight": "227, 190, 52",
+		"textSupport": "255, 223, 108",
+		"bgLight": "63, 63, 63",
+		"text": "255, 255, 255"
+	},
+	"White" : {
+		"name": "White",
+		"id": 4,
+		"bg": "253, 255, 245",
+		"textLight": "222, 53, 76",
+		"textSupport": "183, 50, 37",
+		"bgLight": "245, 245, 245",
+		"text": "63, 63, 63"
+	}
+}

@@ -1,0 +1,4 @@
+container:
+  image: avalanche322/todo-list:latest
+
+replicaCount: 2

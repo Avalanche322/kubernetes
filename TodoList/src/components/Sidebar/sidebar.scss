@@ -1,0 +1,249 @@
+.sidebar {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background: rgb(var(--bg-light));
+	width: 70px; // for close sidebar
+	height: 100vh;
+	height: calc(var(--vh, 0.9vh) * 100);
+	padding-top: 20px;
+	transition: width 0.4s ease 0s;
+	z-index: 8;
+
+	&__header {
+		position: relative;
+		margin: 0px 10px;
+	}
+
+	&__menu {
+		padding-top: 20px;
+		height: 100%;
+	}
+
+	&__active {
+		width: 280px; // for desctop and laptop
+
+		.stats-sidebar {
+			&__title {
+				width: auto;
+			}
+
+			&__logo {
+				cursor: auto;
+			}
+		}
+
+		.help-sidebar {
+			&__btn {
+				width: auto;
+			}
+		}
+
+		.sidebar__link span,
+		.sidebar__logo,
+		.profile-sidebar__body,
+		.stats-sidebar__count-task span,
+		.help-sidebar__text {
+			opacity: 1;
+			pointer-events: painted;
+		}
+
+		.profile-sidebar__logo {
+			right: 10px;
+		}
+
+		.sidebar__humburger {
+			right: 0px;
+		}
+
+		.profile-sidebar__link {
+			width: auto;
+		}
+	}
+
+	&__humburger {
+		position: absolute;
+		right: 12px;
+		top: 4px;
+	}
+
+	&__subtitle {
+		display: block;
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 15px;
+		padding-bottom: 5px;
+		transition: all 0.3s ease;
+		border-bottom: 1px solid rgb(var(--text-light));
+	}
+
+	@media (min-width:768px) {
+
+		&__logo,
+		&__link span {
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.3s ease 0s;
+		}
+	}
+}
+.sidebar-link {
+	&__count {
+		font-size: 14px;
+		margin-left: auto;
+		padding-right: 20px;
+	}
+
+	&__logo {
+		margin-right: 20px;
+		padding-left: 14px;
+	}
+
+	&__title {
+		font-weight: 500;
+	}
+
+	@media (min-width:768px) {
+		&__title {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+}
+.stats-sidebar {
+	margin: 10px 0 0 28px;
+
+	&__count-task {
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__logo {
+		margin-right: 10px;
+		cursor: pointer;
+	}
+
+	@media (min-width:768px) {
+		&__title {
+			width: 12px;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		&__count-task {
+			span {
+				opacity: 0;
+				white-space: nowrap;
+				pointer-events: none;
+				transition: all 0.3s ease;
+			}
+		}
+	}
+}
+.help-sidebar {
+	margin: 20px 0 0 28px;
+
+	&__btn {
+		background: none;
+		color: rgb(var(--text));
+		transition: all 0.3s ease;
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+	}
+
+	&__logo {
+		margin-right: 10px;
+		font-size: 14px;
+	}
+
+	&__btn:hover {
+		color: rgb(var(--text-light));
+	}
+
+	@media (min-width:768px) {
+		&__btn {
+			width: 14px;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		&__text {
+			opacity: 0;
+			white-space: nowrap;
+			pointer-events: none;
+		}
+	}
+}
+.profile-sidebar {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	overflow: hidden;
+	background: rgba(var(--bg), 0.4);
+
+	&__body {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		padding: 10px;
+
+		&:hover {
+			background: rgba(var(--bg), 0.4);
+		}
+	}
+
+	&__logout {
+		position: absolute;
+		right: 10px;
+		cursor: pointer;
+		transition: all 0.4s ease;
+		border-radius: 12px;
+		font-size: 22px;
+		background: transparent;
+		color: rgb(var(--text));
+		font-weight: 500;
+		white-space: nowrap;
+		padding: 10px;
+
+		&:hover {
+			background: rgb(var(--text));
+			color: rgb(var(--bg-light));
+		}
+	}
+
+	&__name {
+		font-weight: 500;
+		font-size: 16px;
+	}
+
+	&__email {
+		color: rgba(var(--text-light), 0.6);
+		font-weight: 300;
+		line-height: 20px;
+	}
+
+	&__name,
+	&__email {
+		display: block;
+		width: 150px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	&__link {
+		width: 100%;
+	}
+
+	@media (min-width:768px) {
+		&__body {
+			opacity: 0;
+			flex-wrap: nowrap;
+		}
+	}
+}
